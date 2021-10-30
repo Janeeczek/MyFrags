@@ -10,13 +10,13 @@ import androidx.fragment.app.Fragment;
 
 public class Fragment1 extends Fragment {
     public interface OnButtonClickListener {
-        public void onButtonClickShuffle();
-        public void onButtonClickClockwise();
-        public void onButtonClickHide();
-        public void onButtonClickRestore();
+         void onButtonClickShuffle();
+         void onButtonClickClockwise();
+         void onButtonClickHide();
+         void onButtonClickRestore();
     }
     private OnButtonClickListener callback = null;
-    //3.
+
     public void setOnButtonClickListener(OnButtonClickListener callback) {
         this.callback = callback;
     }

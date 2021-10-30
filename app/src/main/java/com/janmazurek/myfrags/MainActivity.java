@@ -50,16 +50,10 @@ public class MainActivity extends FragmentActivity implements Fragment1.OnButton
     }
     @Override
     public void onButtonClickShuffle() {
-        //Toast.makeText(getApplicationContext(), "Shuffle", Toast.LENGTH_SHORT).show();
-        //Stary kod. Teraz NIE mieszamy ramek, bo wtedy przestaje działać Clockwise.
-        //List<Integer> list = new ArrayList<>(Arrays.asList(frames[0], frames[1], frames[2], frames[3]));
-        //Collections.shuffle(list);
-        //for (int i = 0; i < 4; i++) frames[i] = list.get(i);
-        //--- Nowy kod. Mieszamy sekwencje fragmentów.
         List<Integer> s = new ArrayList<>(Arrays.asList(sequence[0], sequence[1], sequence[2], sequence[3]));
         Collections.shuffle(s);
         for(int i = 0; i < 4; i++) sequence[i] = s.get(i);
-        //--- Koniec nowego kodu
+
         newFragments();
     }
     @Override
